@@ -56,6 +56,6 @@ function addVersions() {
     select_version.val('/' + path);
 
     select_version.change(function(event) {
-        window.location.href = event.target.value;
+        window.location.href = event.target.value + '/' + current_path;
     });
 }
