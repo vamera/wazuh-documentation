@@ -56,6 +56,10 @@ function addVersions() {
     select_version.val('/' + path);
 
     select_version.change(function(event) {
-        window.location.href = event.target.value + '/' + current_path;
+        if (current_path != "not_found.html") {
+          window.location.href = event.target.value + '/' + current_path;
+        } else {
+          window.location.href = event.target.value;
+        }
     });
 }
